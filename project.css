@@ -1,0 +1,659 @@
+/*created by Sara Lenahan*/
+
+/*constant throughout website*/
+body {
+    background-image: url("images/purple.jpg");
+    background-size: 100em 100em;
+    background-repeat: repeat;
+    padding: 1em;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    color: darkslateblue;
+    font-weight: bold;
+    padding: 0em;
+    margin: 0em;
+    width: 100%;
+    height: 1.2em;
+    font-family: 'Amatic SC', cursive;
+
+}
+
+.menu {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+}
+
+.menu li {
+    list-style: none;
+    float: left;
+    justify-content: space-between;
+    margin-right: 1em;
+    font-size: 1.3em;
+    width: 7em;
+    text-align: center;
+    padding-top: .1em;
+    height: 2.4em;
+}
+
+.menu li a {
+    text-decoration: none;
+    Font-size: 1.5em;
+    color: darkslateblue
+}
+
+.menu li:nth-of-type(4) {
+    background-color: rgb(220, 216, 216);
+    height: 2.33em;
+}
+
+li a:visited {
+    color: palevioletred;
+}
+
+a.current:link,
+a.current:visited {
+    text-decoration: underline;
+}
+
+li a:focus {
+    color: red;
+}
+
+.toplogo {
+    position: absolute;
+    top: -1em;
+    height: 8.3em;
+    width: 8.3em;
+    border-radius: 50%;
+}
+
+.facts p {
+    display: none;
+}
+
+img {
+    width: 18em;
+    height: 18em;
+    margin: 1em;
+    border-radius: 50%;
+}
+
+ small {
+    position: absolute;
+    bottom: -80em;
+    left: 40em;
+}
+
+
+/*start homepage*/
+.facts {
+    display: flex;
+    width: 90%;
+    flex-basis: 2em;
+    justify-content: center;
+    margin: 5em;
+}
+
+/*transitions fact1*/
+.facts .top,
+top3 {
+    position: relative;
+    left: 20em;
+    top: .1em;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes fact1FadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.bottom {
+    position: relative;
+    animation-name: fact1FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+
+/*transition fact3*/
+#homepage .facts .top3 {
+    position: relative;
+    transition: opacity 1s ease-in-out;
+
+}
+
+@keyframes fact3FadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.bottom3 {
+    position: relative;
+    right: 20em;
+    animation-name: fact1FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+
+/*about me*/
+#aboutme .incerpt p:first-of-type {
+    font-size: 1.5em;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    color: white;
+
+}
+
+#aboutme .incerpt {
+    width: 90%;
+    padding: 1em;
+    font-size: 2em;
+    text-indent: 1em;
+}
+
+#aboutme .incerpt img {
+    float: left;
+    border-radius: 0%;
+}
+
+#aboutme .incerpt img:first-child {
+    width: 20%;
+    height: 50%
+}
+
+#aboutme .incerpt img:nth-child(2) {
+    width: 30%;
+    height: 30%;
+    float: right
+}
+
+/*resume*/
+
+    
+#resume aside{
+    position: absolute;
+    top:12em;
+    left:26em;
+    width:20%
+}
+#resume aside ul{
+     display: inline-flex;
+    flex-flow: row;
+    list-style: none;
+    font-family: 'BenchNine', sans-serif;
+    margin:.5em;
+    height:1em;
+    align-items: center;
+    
+}
+#resume aside li{
+    margin:.5em;
+    color:white;
+}
+a:link{
+    color:black;
+}
+a:visited{
+    color:purple;
+}
+.resumewrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3em;
+    padding: 1em;
+    align-items: center;
+    
+}
+
+#resume article {
+    background-color: white;
+    margin-top: 1.5em;
+    border-radius: 5%;
+    border: solid .1em darkslateblue;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+#resume article:nth-of-type(4){
+    width:20%;
+    height:55%;
+    flex-basis:50%;
+
+}
+
+#resume article:nth-child(2n) {
+    height: 17em;
+}
+#resume article:nth-of-type(5){
+    width:10em;
+}
+
+#resume h2 {
+    text-align: center;
+}
+
+.resumewrapper li {
+    margin: .1em;
+    padding-left: 0em;
+    text-indent: 3em;
+    list-style: none;
+
+}
+
+.resumewrapper li:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-indent: 0em;
+}
+
+.resumewrapper li:nth-child(2) {
+    text-indent: 1.5em;
+}
+
+.resumewrapper li:nth-child(2) {
+    font-style: italic;
+
+}
+
+.resumewrapper ul {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: .1em;
+}
+
+
+#resume .Leadership li {
+    font-weight: 200;
+    font-style: normal;
+    text-indent: 0em;
+    list-style: circle;
+    font-size:1em;
+
+}
+
+#resume .leadership li:first-of-type {
+    font-size: 1em;
+
+}
+
+#resume .leadership ul {
+    width:20%;
+}
+
+#resume .workhistory li:first-of-type + li + li {
+    text-indent: 1.5em;
+}
+
+.workhistory {
+    padding-bottom: 1em;
+}
+#resume .skills {
+    width:80%;
+    
+}
+
+
+#resume .skills li:first-of-type{
+    font-weight: 100;
+    font-size: 1em;
+}
+#resume .skills li{
+    list-style: circle;
+     text-indent:0em;
+    font-style: normal;
+}
+    
+}
+/*contact*/
+.contactlinks {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1em;
+}
+
+.contactlinks::before {
+    content: url("css/images/headshot.png");
+}
+
+.contactlinks ul {
+    vertical-align: middle;
+    flex-shrink: 1;
+    font-size: 1.5em;
+    width: 40%;
+    list-style: none;
+    margin: 1em;
+    padding: 1em;
+    position: absolute;
+    top:19em;
+    left:3em;
+}
+
+.contactlinks ul li {
+    line-height: 2em;
+}
+
+#contact h2 {
+    position: absolute;
+    top: 10em;
+}
+
+.contactlinks::before {
+    content: url("images/headshot.png");
+    transform: scale(.75, .75);
+    position: absolute;
+    left:25em;
+}
+
+.contactlinks {
+    justify-content: center;
+}
+
+.contactlinks ul {
+    width: 88%;
+    padding: 0em;
+    margin: 0em;
+    text-align: center;
+}
+
+a[target] {
+    background-color: white;
+}
+
+@media screen and (max-width:72em) and (min-width:64em) {
+
+    .menu {
+        background: none;
+        position: relative;
+        top: 10em;
+        z-index: 1;
+    }
+
+    .menu ul {
+        width: 12em;
+        display: flex;
+        flex-flow: column wrap;
+        outline: .1em solid black;
+        padding-left: 0em;
+        position: relative;
+        left: -17em;
+        background-color: white;
+    }
+
+    .menu li {
+        border-bottom: .01em solid black;
+        margin-right: 0;
+        width: 12em;
+        font-size: 1em;
+    }
+
+    .menu li:nth-child(4) {
+        border-bottom: none;
+        width: 12em;
+    }
+
+    .menu li:nth-child(3) {
+        flex-grow: 3;
+    }
+
+    .toplogo {
+        width: 30%;
+        height: 30%;
+    }
+
+    h1 {
+        position: relative;
+        left: .5em;
+        z-index: 1;
+    }
+
+    .facts p {
+        display: block;
+        font-size: 2.5em;
+        position: relative;
+        width: 8em;
+        text-align: center;
+        top: -3em;
+        left: -4em;
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+        margin: 0;
+        height: 20%;
+    }
+
+    .facts img:nth-child(2n) {
+        display: none;
+    }
+
+    .facts .top {
+        display: none;
+    }
+
+    .facts .bottom {
+        display: none
+    }
+
+    .facts .bottom3 {
+        display: none;
+    }
+
+    .facts img {
+        border-radius: 0%;
+        position: relative;
+        left: 10em;
+    }
+
+    .bottomlogo {
+        left: 25em;
+        bottom: -90em;
+    }
+
+    footer small {
+        left: 22.5em;
+
+    }
+
+    #aboutme .incerpt {
+        position: relative;
+        font-size: 1.5em;
+        float: right;
+        width: 65%;
+    }
+    #aboutme .incerpt p:first-of-type{
+        text-align: left;
+    }
+
+    #aboutme .incerpt img:nth-child(1) {
+        float: right;
+        padding: .1em;
+        transform: scale(.75, .8)
+    }
+
+    #resume .resumewrapper {
+        width: 50%;
+        position: relative;
+        left: 12em;
+        top: -2em;
+    }
+
+    .workhistory {
+        padding-bottom: 5em;
+    }
+
+    .top {
+        left: 15.5em;
+    }
+
+    .contactlinks::before {
+        content: url("images/headshot.png");
+        transform: scale(.5, .5);
+    }
+
+    .contactlinks {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+        position: relative;
+        left: 8em;
+    }
+}
+
+@media screen and (min-width:20em)and (max-width:64em) {
+
+    .menu {
+        background: none;
+    }
+
+    .menu li {
+        position: relative;
+        width: 97%;
+        height: auto;
+        margin-left: -.7em;
+        top: 4em;
+        border-top: solid .1em darkslateblue;
+        border-right: solid .1em darkslateblue;
+        border-left: solid .1em darkslateblue;
+        align-items: center;
+        background-color: rgb(255, 255, 255)
+    }
+
+    .menu ul li:nth-child(4) {
+        border: none;
+        height: auto;
+        border: solid .1em darkslateblue;
+        border-bottom: solid .1em darkslateblue;
+        width: 97%;
+    }
+
+    .toplogo {
+        width: 8em;
+        height: 8em;
+        z-index: -1;
+    }
+
+    .facts p {
+        display: none;
+
+    }
+
+    .facts {
+        flex-flow: column wrap;
+        margin: 0em;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        top: 10em;
+    }
+
+    .facts .top {
+        left: -.1em;
+
+    }
+
+    .facts .bottom {
+        top: -20em;
+    }
+
+    .top2 {
+        position: relative;
+        top: -20em;
+    }
+
+    .top3 {
+        position: relative;
+        top: -20em;
+    }
+
+    .bottom3 {
+        top: -40em;
+        left: 0em;
+    }
+
+
+    footer small {
+        left: 15em;
+        bottom: -85em;
+    }
+
+    #aboutme p {
+        font-size: 1em;
+    }
+    #aboutme .incerpt{
+        position: relative;
+        top:2em;
+    }
+    #aboutme p:first-of-type{
+        position: relative;
+        top:1em;
+    }
+
+    #aboutme .incerpt img {
+        display: none;
+    }
+    #resume aside{
+        position: absolute;
+        top:88em;
+        left:7em;
+        width:15em;
+    }
+    .resumewrapper {
+        position: relative;
+        top: 10em;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    #resume article {
+        display: block;
+        float: left;
+        font-size: .75em;
+    }
+
+    .top {
+        left: -4.5em;
+        top: 10em;
+    }
+
+    .contactlinks {
+        position: relative;
+        top: 11em;
+    }
+}
